@@ -226,7 +226,7 @@ namespace NLog.Targets
         /// <param name="logEvents">The log events.</param>
         public void WriteAsyncLogEvents(params AsyncLogEventInfo[] logEvents)
         {
-            if (logEvents == null)
+            if (logEvents == null || 0 == logEvents.Length)
             {
                 return;
             }
